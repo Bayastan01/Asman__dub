@@ -1,6 +1,6 @@
 .cards {
 	width: 220px;
-	height: 340px;
+	height: 390px;
 	padding: 4px;
 	display: flex;
 	flex-direction: column;
@@ -8,10 +8,11 @@
 	border-radius: 12px;
 	min-height: 243px;
 	margin-right: 40px;
+	margin-left: 20px;
 }
 .card__one {
 	width: 220px;
-	height: 340px;
+	height: 390px;
 }
 .card__image {
 	background-color: palegreen;
@@ -26,21 +27,36 @@
 	height: 260px;
 	background-repeat: no-repeat;
 }
+.card__name__films {
+	width: 220px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: rgb(44, 44, 44);
+	margin-top: 5px;
+	border: 1px solid red;
+	display: flex;
+	font-weight: 600;
+	font-size: 18px;
+	justify-content: space-around;
+	align-items: center;
+}
 .card__footer {
 	width: 220px;
 	height: 60px;
 	border-radius: 10px;
 	background-color: rgb(44, 44, 44);
-	margin-top: 10px;
+	margin-top: 5px;
 	border: 1px solid red;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
-.card__play {
-	background-image: url('./play.png');
+.card__play1 {
+	background-image: url('./play-button.png');
 }
-
+.card__play2 {
+	background-image: url('./pause-button.png');
+}
 .navigation__button {
 	width: 50px;
 	height: 50px;
@@ -65,8 +81,45 @@
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none;
 	column-gap: 8px;
-	margin-top: 40px;
+	margin-top: 10px;
+	cursor: pointer;
 }
 .navigation__list::-webkit-scrollbar {
 	display: none;
+}
+.card__text_time {
+	width: 30%;
+	height: 50px;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	font-size: 18px;
+	justify-content: center;
+	transition: 1s;
+	cursor: pointer;
+}
+
+.card__text_time:hover {
+	font-size: 22px;
+	color: red;
+	transition: 1s;
+}
+.card__text_name {
+	height: 50px;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	font-size: 28px;
+	justify-content: start;
+	transition: 1s;
+	cursor: pointer;
+	margin-left: 30px;
+	margin-top: 20px;
+	color: rgb(255, 213, 0);
+}
+
+.card__text_name:hover {
+	font-size: 32px;
+	color: red;
+	transition: 1s;
 }

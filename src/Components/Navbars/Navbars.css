@@ -6,28 +6,86 @@
 	/* background-color: aliceblue; */
 }
 .navigation__button_active {
-	color: rgb(247, 193, 0);
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 213, 0);
 }
 .logo_and_categories {
-	opacity: 1;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.categories_name_navbar {
+.categories_name_navbars {
 	display: flex;
-	justify-content: space-around;
+	padding: 0 calc((100vw / 2) - (var(--container) / 2));
+	overflow-x: auto;
+	overflow-y: hidden;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+	column-gap: 8px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	position: sticky;
+	background-color: #242424;
+
+	top: 8%;
+	height: 50px;
 }
 
+.categories_name_navbars::-webkit-scrollbar {
+	display: none;
+}
 .bg {
 	position: sticky;
 	top: 0%;
-	z-index: 2;
-	border-radius: 10px;
-	/* background-color: white; */
+	background-color: #242424;
+	/* margin-bottom: 10px; */
+	/* box-shadow: 0.1px 2px 22px red; */
 }
 
-#bg__color {
-	background-color: rgba(0, 0, 0, 0.3);
+.nav_text_bar {
+	margin-left: 20px;
+	/* border: 1px solid rgb(248, 220, 7); */
+	border-radius: 10px;
+}
+#name {
+	/* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.logo:hover {
+	color: red;
+	text-shadow: 0.1rem 0.1rem 4rem;
+}
+.name__dub:hover {
+	color: red;
+	text-shadow: 0.1rem 0.1rem 4rem;
+}
+.name__dub {
+	font-size: 59px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2rem;
+	color: rgb(255, 213, 0);
+}
+.navbar__search {
+	width: 700px;
+}
+
+.Login__and__Sign {
+	height: 50px;
+	width: 100px;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	border-radius: 10px;
+	/* border: 1px solid white; */
+	/* background-color: red; */
+}
+
+.ActiveLogin {
+	background-color: red;
+}
+.LoginAndSign {
+	display: flex;
+	justify-content: space-between;
 }
