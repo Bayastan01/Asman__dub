@@ -1,0 +1,72 @@
+.cards {
+	width: 220px;
+	height: 340px;
+	padding: 4px;
+	display: flex;
+	flex-direction: column;
+	background: #22a6fe;
+	border-radius: 12px;
+	min-height: 243px;
+	margin-right: 40px;
+}
+.card__one {
+	width: 220px;
+	height: 340px;
+}
+.card__image {
+	background-color: palegreen;
+	border-radius: 10px;
+	width: 220px;
+	height: 260px;
+	border: 1px solid rgb(157, 157, 157);
+}
+.card__img {
+	border-radius: 10px;
+	width: 220px;
+	height: 260px;
+	background-repeat: no-repeat;
+}
+.card__footer {
+	width: 220px;
+	height: 60px;
+	border-radius: 10px;
+	background-color: rgb(44, 44, 44);
+	margin-top: 10px;
+	border: 1px solid red;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.card__play {
+	background-image: url('./play.png');
+}
+
+.navigation__button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	line-height: 55px;
+	white-space: nowrap;
+	background-color: #2e2b2b;
+	background-repeat: no-repeat;
+	background-size: 55px;
+	padding: 0.1rem 0.1rem;
+}
+
+.navigation__button:hover {
+	border: 1px solid rgb(218, 10, 10);
+	box-shadow: 0.1rem 0.1rem 1rem red;
+}
+.navigation__list {
+	display: flex;
+	padding: 0 calc((100vw / 2) - (var(--container) / 2));
+	overflow-x: auto;
+	overflow-y: hidden;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+	column-gap: 8px;
+	margin-top: 40px;
+}
+.navigation__list::-webkit-scrollbar {
+	display: none;
+}

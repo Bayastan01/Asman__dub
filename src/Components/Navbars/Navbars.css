@@ -1,0 +1,33 @@
+.navbar {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+
+	/* background-color: aliceblue; */
+}
+.navigation__button_active {
+	color: rgb(247, 193, 0);
+}
+.logo_and_categories {
+	opacity: 1;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.categories_name_navbar {
+	display: flex;
+	justify-content: space-around;
+}
+
+.bg {
+	position: sticky;
+	top: 0%;
+	z-index: 2;
+	border-radius: 10px;
+	/* background-color: white; */
+}
+
+#bg__color {
+	background-color: rgba(0, 0, 0, 0.3);
+}
