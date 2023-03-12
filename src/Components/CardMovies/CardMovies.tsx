@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import api from '../../Api/apiurl.json'
 import './CardMovies.css'
 
 export default function CardMovies() {
@@ -6,30 +7,33 @@ export default function CardMovies() {
 	// const changeImage = () => {
 	// 	setImgchange(!changeImage)
 	// }
+	const apuurl = api.UrlImageHeader.data.items
+	const apuurl1 = api.UrlImageHeader.data.items2
+
 	const changeImage = () => setImgchange(value => !value)
 	return (
 		<>
 			<div>
 				<div className='card__text_name'>Fimls 24</div>
 				<div className='navigation__list'>
-					{mac.map((item, i) => {
+					{apuurl.map((it, i) => {
 						return (
 							<>
 								<div className='cards' key={i}>
 									<div className='card__one'>
 										<div className='card__image'>
-											<img className='card__img' src={item.image} />
+											<img className='card__img' src={it.url} />
 										</div>
 
-										<div className='card__name__films'>{item.namemovie}</div>
+										<div className='card__name__films'>{it.name}</div>
 
 										<div className='card__footer'>
-											<span className='card__text_time'>10/9</span>
+											<span className='card__text_time'>10/{it.bal}</span>
 
 											<div
 												className={`
 							navigation__button ${imgchange === true ? 'card__play1' : 'card__play2'} `}
-												onClick={() => changeImage()}
+												onClick={() => changeImage(i)}
 											></div>
 											<span className='card__text_time'>1.55</span>
 										</div>
@@ -43,22 +47,22 @@ export default function CardMovies() {
 			<div>
 				<div className='card__text_name'>Fimls 24</div>
 				<div className='navigation__list'>
-					{macs.map((item, i) => {
+					{apuurl1.map((item, i) => {
 						return (
 							<>
 								<div className='cards' key={i}>
 									<div className='card__one'>
 										<div className='card__image'>
-											<img className='card__img' src={item.image} />
+											<img className='card__img' src={item.url} />
 										</div>
-										<div className='card__name__films'>{item.namemovie}</div>
+										<div className='card__name__films'>{item.name}</div>
 										<div className='card__footer'>
-											<span className='card__text_time'>10/9</span>
+											<span className='card__text_time'>10/{item.bal}</span>
 
 											<div
 												className={`
 							navigation__button ${imgchange === true ? 'card__play1' : 'card__play2'} `}
-												onClick={() => changeImage()}
+												onClick={() => changeImage(i)}
 											></div>
 											<span className='card__text_time'>1.55</span>
 										</div>
